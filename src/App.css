@@ -1,9 +1,7 @@
 .App {
   text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
+  background-image: url('http://www.gsfdcy.com/data/img1/73/1991926-rugby-wallpaper.jpg');
+  background-size: 100%;
 }
 
 .App-header {
@@ -13,10 +11,45 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  font-size: calc(20px + 2vmin);
   color: white;
 }
 
 .App-link {
   color: #09d3ac;
 }
+
+.tabheaders {
+  /* justify-self: center;
+  align-self: flex-start;
+  flex-wrap: nowrap; */
+  width: 100%;
+  margin-top: 1%;
+  margin-bottom: 1%;
+  
+}
+
+
+.grid-item {
+  height: 620px;
+  border-right: black;
+  border-right-style: solid;
+  overflow: scroll;
+  width: 1fr;
+}
+
+#Matches {
+  grid-column: 1;
+  align-items: center;
+}
+
+#Teams {
+  grid-column: 2;
+  align-items: center;
+}
+
+#Players {
+  grid-column: 3;
+  align-items: center;
+}
+

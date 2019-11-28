@@ -1,0 +1,10 @@
+.grid-container {
+  display: grid;
+  grid-template-columns: 3;
+  margin-top: 2%;
+  margin-left: 10%;
+  width: 80%;
+  height: 650px;
+  border: solid;
+  }
+  
