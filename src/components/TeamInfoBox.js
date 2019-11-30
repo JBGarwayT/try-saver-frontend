@@ -1,5 +1,4 @@
 import React from 'react';
-import TeamCards from './TeamCards'
 import PlayerCards from './PlayerCards';
 
 const TeamInfoBox = (props) => {

@@ -1,55 +1,39 @@
 .App {
   text-align: center;
-  background-image: url('http://www.gsfdcy.com/data/img1/73/1991926-rugby-wallpaper.jpg');
+  background-image: url('https://upload.wikimedia.org/wikipedia/commons/9/98/Rugby_Union_Pitch.png');
   background-size: 100%;
+  background: Wedding Veil;
 }
 
 .App-header {
-  background-color: #282c34;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   font-size: calc(20px + 2vmin);
-  color: white;
 }
+
+.header-img {
+  width: 100%;
+  position: relative;
+  top: 0;
+  left: 0;
+  background-color: #23B14D;
+  height: 80px;
+  padding: 5px;
+}
+
 
 .App-link {
   color: #09d3ac;
 }
 
-.tabheaders {
-  /* justify-self: center;
-  align-self: flex-start;
-  flex-wrap: nowrap; */
-  width: 100%;
-  margin-top: 1%;
-  margin-bottom: 1%;
-  
+.main-logo {
+  max-height: 70px;
+
 }
 
-
-.grid-item {
-  height: 620px;
-  border-right: black;
-  border-right-style: solid;
-  overflow: scroll;
-  width: 1fr;
+.search {
+  margin-bottom: 5%;
 }
-
-#Matches {
-  grid-column: 1;
-  align-items: center;
-}
-
-#Teams {
-  grid-column: 2;
-  align-items: center;
-}
-
-#Players {
-  grid-column: 3;
-  align-items: center;
-}
-

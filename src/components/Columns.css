@@ -1,0 +1,60 @@
+.content {
+  align-content: center;
+}
+.grid-item {
+  height: 90%;
+  overflow: scroll;
+  justify-self: center;
+  border-right: solid, black;
+}
+
+#Matches {
+  grid-column: 1;
+  justify-items: center;
+}
+
+.ribbon-left {
+  float: left;
+  width: 20%;
+  position: relative;
+  text-align: center;
+  padding: 1em 2em; /* Adjust to suit */
+  border: 1px solid black;
+  border-style: solid;
+}
+
+.ribbon-right {
+  float: right;
+  width: 20%;
+  position: relative;
+  text-align: center;
+  padding: 1em 2em; /* Adjust to suit */
+  border: 1px solid black;
+}
+
+
+#Teams {
+  grid-column: 2;
+  align-items: center;
+}
+
+#Players {
+  grid-column: 3;
+  align-items: center;
+}
+
+#Matches::-webkit-scrollbar {
+  display: none;
+}
+
+#Teams::-webkit-scrollbar {
+  display: none;
+}
+
+#Players::-webkit-scrollbar {
+  display: none;
+}
+
+.header {
+  background: Wedding Veil	;
+}

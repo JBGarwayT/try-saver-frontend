@@ -33,34 +33,36 @@ class App extends Component {
 
   fillSearch = (input) => {
     this.setState({
-      userInput: input
+      selectedTeam: "",
+      userInput: input,
     })
   }
 
   availableTeamsFromSearch = () => {
     if (this.state.userInput !== '')
-      {const searchTerm = this.state.userInput.toLocaleLowerCase()
+      {
+        const searchTerm = this.state.userInput.toLocaleLowerCase()
       return this.state.teams.filter(team => team.name.toLocaleLowerCase().includes(searchTerm))}
     else {
       return this.state.teams
     }
   }
 
-    availabeTeamPlayers = () => {
-      if (this.state.userInput !== '') {
-        const searchTerm = this.state.userInput.toLocaleLowerCase()
-        return this.state.players.filter(player => player.name.toLocaleLowerCase().includes(searchTerm))
-      }
-      else if (this.state.selectedTeam !== "") {
-        const team = this.state.teams.find(t => t.id === this.state.selectedTeam)
-        return team.players
-      }
-      else {
-        const pleaseSelectATeam = [{
-          name: "team to render players, Please select a"
-        }]
-        return pleaseSelectATeam
-      }
+  availabeTeamPlayers = () => {
+    if (this.state.userInput !== '') {
+      const searchTerm = this.state.userInput.toLocaleLowerCase()
+      return this.state.players.filter(player => player.name.toLocaleLowerCase().includes(searchTerm))
+    }
+    else if (this.state.selectedTeam !== "") {
+      const team = this.state.teams.find(t => t.id === this.state.selectedTeam)
+      return team.players
+    }
+    else {
+      const pleaseSelectATeam = [{
+        name: "team to render players, Please select a"
+      }]
+      return pleaseSelectATeam
+    }
   }
 
   render() {

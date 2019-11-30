@@ -1,5 +1,5 @@
 import React from 'react';
-import './Matches.css'
+import './Columns.css'
 import MatchCard from './MatchCard';
 
 const Matches = (props) => {
