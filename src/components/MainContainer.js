@@ -18,15 +18,19 @@ class MainContainer extends Component {
     .then(matches => this.setState({ leagueMatches: matches}))
   }
 
-  selectedTeamMatches = () => {
-    const allTeamsInAllMatches = this.state.leagueMatches.filter(match => match.teams.find(team => team.id === this.props.selectedTeam ))
-    return allTeamsInAllMatches
+  selectedMatches = () => {
+    if (this.props.selectedTeam !== "") {
+      const allTeamsInAllMatches = this.state.leagueMatches.filter(match => match.teams.find(team => team.id === this.props.selectedTeam ))
+      return allTeamsInAllMatches}
+    else {
+      return this.state.leagueMatches.filter(match => match.date >= new Date().toISOString())
+    }
   }
 
   presentSelectedTeam = () => {
     if (this.props.selectedTeam) {
       const team = this.props.teams.filter(team => team.id === this.props.selectedTeam)
-      return <TeamCards rugbyTeam={team[0]} chooseTeam={this.props.chooseTeam}/>
+      return <TeamCards rugbyTeam={team[0]} click={this.props.clearTeam} />
       // return team[0]
     }
     else {
@@ -56,6 +60,7 @@ class MainContainer extends Component {
               You are looking at
             </Header.Content>
           </Header>
+          <br />
           {this.presentSelectedTeam()}          
         </div>
         <div className="tabheaders">
@@ -64,9 +69,8 @@ class MainContainer extends Component {
               {this.selectedTeamName()}
             </Header.Content>
           </Header>
-          {/* <button className="tablinks">Players</button> */}
         </div>
-        <Matches matches={this.props.selectedTeam !== "" ? this.selectedTeamMatches() : this.state.leagueMatches} />
+        <Matches matches={this.selectedMatches()} />
         <LeagueInfoBox teams={this.props.teams} chooseTeam={this.props.chooseTeam} />
         <TeamInfoBox players={this.props.players} />
       </div>

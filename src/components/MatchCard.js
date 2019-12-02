@@ -4,11 +4,6 @@ import API from '../helper_methods/api'
 
 const MatchCard = (props) => {
 
-    const splitting = props.match.date.split("T")
-
-    const date = splitting[0]
-    const time = splitting[1].split(":00+")[0]
-
     const home =  `#${props.match.teams[0].color_1}`
     const away =  `#${props.match.teams[1].color_1}`
 
@@ -26,7 +21,7 @@ const MatchCard = (props) => {
                             <span className='ribbon-right' style={teamColor(away)} />
                         </Segment>
                     </Card.Header>
-                    <Card.Description>{date} egg chasing starts at {time}
+                    <Card.Description>{props.match.date} egg chasing starts at {props.match.kick_off_time}
                         <br />
                         @ {props.match.location}, {props.match.city}
                     </Card.Description>

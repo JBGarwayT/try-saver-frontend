@@ -65,12 +65,18 @@ class App extends Component {
     }
   }
 
+  clearSelectedTeam = () => {
+    this.setState({
+      selectedTeam: ""
+    })
+  }
+
   render() {
     return (
     <div className="App">
       <Header /> 
       <Search fillSearch={this.fillSearch}/>
-      <MainContainer teams={this.availableTeamsFromSearch()} selectedTeam={this.state.selectedTeam} chooseTeam={this.selectTeam} players={this.availabeTeamPlayers()}/>
+      <MainContainer teams={this.availableTeamsFromSearch()} selectedTeam={this.state.selectedTeam} chooseTeam={this.selectTeam} players={this.availabeTeamPlayers()} clearTeam={this.clearSelectedTeam}/>
     </div>
     );
   }
