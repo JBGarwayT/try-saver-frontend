@@ -2,7 +2,7 @@
   align-content: center;
 }
 .grid-item {
-  height: 90%;
+  height: 100%;
   overflow: scroll;
   justify-self: center;
   border-right: solid, black;
@@ -16,19 +16,18 @@
 .ribbon-left {
   float: left;
   width: 20%;
+  height: 25px;
   position: relative;
   text-align: center;
-  padding: 1em 2em; /* Adjust to suit */
   border: 1px solid black;
-  border-style: solid;
 }
 
 .ribbon-right {
   float: right;
   width: 20%;
+  height: 25px;
   position: relative;
   text-align: center;
-  padding: 1em 2em; /* Adjust to suit */
   border: 1px solid black;
 }
 

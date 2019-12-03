@@ -20,8 +20,8 @@ const TeamCards = (props) => {
             </Card.Content>
             <Card.Content extra>
             <a>
-                <Icon name='user' />
-                Squad size: {props.rugbyTeam.players.length}
+                <Icon />
+                {props.message}
             </a>
             </Card.Content>
         </Card>

@@ -30,7 +30,7 @@ class MainContainer extends Component {
   presentSelectedTeam = () => {
     if (this.props.selectedTeam) {
       const team = this.props.teams.filter(team => team.id === this.props.selectedTeam)
-      return <TeamCards rugbyTeam={team[0]} click={this.props.clearTeam} />
+      return <TeamCards rugbyTeam={team[0]} click={this.props.clearTeam} message='Deselect this team'/>
       // return team[0]
     }
     else {

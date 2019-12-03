@@ -11,11 +11,11 @@ const PlayerCards = (props) => {
                 <Card.Header> {reverseName[1]} {reverseName[0]}
                 </Card.Header>
                 <Card.Description>
-                    Nationality: {props.player.nationality}, Gender: {props.player.gender}
+                    Height: {props.player.height}cm      Weight: {props.player.weight}kg      Pos: {props.player.position}
                 </Card.Description>
             </Card.Content>
             <CardContent extra>
-                Height: {props.player.height}cm      Weight: {props.player.weight}kg      Pos: {props.player.position}
+                Nationality: {props.player.nationality}, Gender: {props.player.gender}
             </CardContent>
         </Card>
     )
