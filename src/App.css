@@ -1,9 +1,14 @@
 .App {
   text-align: center;
-  background-image: url('https://upload.wikimedia.org/wikipedia/commons/9/98/Rugby_Union_Pitch.png');
-  background-size: 100%;
-  background: Wedding Veil;
+  background-image: url('https://www.sispitches.com/ie/wp-content/uploads/sites/4/2016/11/Newcastle-Falcons-2014.jpg');
+  background-position-x: -60px;
+  background-size: 105%;
+  /* @media only screen and (min-width 1070px){
+    background: flex-direction;
+  } */
 }
+
+/* https://upload.wikimedia.org/wikipedia/commons/9/98/Rugby_Union_Pitch.png */
 
 .App-header {
   min-height: 100vh;
@@ -19,9 +24,9 @@
   position: relative;
   top: 0;
   left: 0;
-  background-color: #23B14D;
-  height: 80px;
-  padding: 5px;
+  background-color: black;
+  height: 100px;
+  padding: 10px;
 }
 
 

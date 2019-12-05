@@ -8,6 +8,8 @@ import API from './helper_methods/api'
 class App extends Component {
 
   state = {
+    leagues: [],
+    selectedLeague: "",
     teams: [],
     selectedTeam: "",
     teamMatches: [],
@@ -20,6 +22,10 @@ class App extends Component {
     .then(teams => this.setState({ 
       teams: teams,
       players: teams.map(team => team.players).flat(),
+    }))
+    API.getLeagues()
+    .then(leagues => this.setState({
+      leagues
     }))
   }
 

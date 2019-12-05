@@ -3,18 +3,21 @@
   grid-template-columns: 1fr 1fr 1fr !important;
   grid-template-rows: min-content !important;
   margin-top: 2%;
-  margin-left: 9.8%;
+  margin-left: 10.5%;
   width: 80%;
-  height: 85vh;
+  height: 87vh;
   margin-top: -80px;
   padding-top: 80px;
+
 }
 
 .tabheaders {
   width: 1fr;
-  margin-top: 5%;
-  margin-bottom: 5%;
-  height: fit-content;
+  padding-top: 5%;
+  padding-bottom: 2%;
+  border-bottom: 5%;
+  height: 100%;
   justify-content: center;
   display: inherit;
+  border-bottom: 5px solid black;
 }

@@ -4,27 +4,30 @@ import API from '../helper_methods/api'
 
 const MatchCard = (props) => {
 
+    const team_score_1 = props.match.team_matches[0].team_score || "Unknown 1"
+    const team_score_2 = props.match.team_matches[1].team_score || "Unknown 2"
+
     const home = (props.match.team_matches[0].team_api_id === props.match.teams[0].api_id ? props.match.teams[0] : props.match.teams[1])
     const away = (props.match.team_matches[0].team_api_id !== props.match.teams[0].api_id ? props.match.teams[0] : props.match.teams[1])
     const home_color =  `#${home.color_1}`
     const away_color =  `#${away.color_1}`
 
     const position = () => {
-        debugger
-        if (props.match.team_matches[0].team_score > props.match.team_matches[1].team_score) {
-        return (
-            <Card.Description>{home.name.split('R')[0]} win against {away.name.split('R')[0]}
+        // debugger
+       
+        if (team_score_1 > team_score_2) {
+            return (<Card.Description>{home.name.split('R')[0]} win against {away.name.split('R')[0]}
                 <br />
                 @ {props.match.location}, {props.match.city}
             </Card.Description>
         )}
-        else if (props.match.team_matches[0].team_score < props.match.team_matches[1].team_score) {
+        else if (team_score_1 < team_score_2) {
             return (<Card.Description>{away.name.split('R')[0]} win against {home.name.split('R')[0]}
                 <br />
                 @ {props.match.location}, {props.match.city}
             </Card.Description>
         )}
-        else if (props.match.team_matches[0].team_match.team_score === props.match.team_matches[1].team_match.team_score) {
+        else if (team_score_1 === team_score_2) {
             return (<Card.Description>{home.name.split('R')[0]} draw against {away.name.split('R')[0]}
                 <br />
                 @ {props.match.location}, {props.match.city}
@@ -42,7 +45,7 @@ const MatchCard = (props) => {
                 <Card.Header > 
                     <Segment raised>
                         <span className='ribbon-left' style={teamColor(home_color)} />
-                        {home.abbreviation}  {props.match.team_matches[0].team_score} vs {props.match.team_matches[1].team_score}  {away.abbreviation}
+                        {home.abbreviation}  {team_score_1} vs {team_score_2}  {away.abbreviation}
                         <span className='ribbon-right' style={teamColor(away_color)} />
                     </Segment>
                 </Card.Header>

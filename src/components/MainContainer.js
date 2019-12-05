@@ -5,7 +5,7 @@ import TeamCards from './TeamCards';
 import LeagueInfoBox from './LeagueInfoBox';
 import Matches from './Matches'
 import API from '../helper_methods/api';
-import { Header, Icon } from 'semantic-ui-react'
+import { Header } from 'semantic-ui-react'
 
 class MainContainer extends Component {
 
@@ -52,22 +52,21 @@ class MainContainer extends Component {
     return (
       <div className="grid-container">
         <div className="tabheaders">
-          <button className="tablinks">English Premiership</button>
+          <Header as='h2'>
+              English Premiership
+          </Header>
+          {/* <button className="tablinks">English Premiership</button> */}
         </div>
          <div className="tabheaders">
           <Header as='h2'>
-            <Header.Content>
               You are looking at
-            </Header.Content>
           </Header>
           <br />
           {this.presentSelectedTeam()}          
         </div>
         <div className="tabheaders">
           <Header as='h2'>
-            <Header.Content>
               {this.selectedTeamName()}
-            </Header.Content>
           </Header>
         </div>
         <Matches matches={this.selectedMatches()} />
