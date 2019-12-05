@@ -5,7 +5,8 @@ import TeamCards from './TeamCards';
 import LeagueInfoBox from './LeagueInfoBox';
 import Matches from './Matches'
 import API from '../helper_methods/api';
-import { Header } from 'semantic-ui-react'
+import { Header } from 'semantic-ui-react';
+import LeagueHeader from './LeagueHeader'
 
 class MainContainer extends Component {
 
@@ -52,10 +53,7 @@ class MainContainer extends Component {
     return (
       <div className="grid-container">
         <div className="tabheaders">
-          <Header as='h2'>
-              English Premiership
-          </Header>
-          {/* <button className="tablinks">English Premiership</button> */}
+          {this.props.leagues.map(league => <LeagueHeader lg={league} click={this.props.changeLeagueId}/>)}
         </div>
          <div className="tabheaders">
           <Header as='h2'>
@@ -70,12 +68,14 @@ class MainContainer extends Component {
           </Header>
         </div>
         <Matches matches={this.selectedMatches()} />
-        <LeagueInfoBox teams={this.props.teams} chooseTeam={this.props.chooseTeam} />
+        <LeagueInfoBox  chooseTeam={this.props.chooseTeam} teams={this.props.teams}/>
         <TeamInfoBox players={this.props.players} />
       </div>
     );
   }
 
 }
+
+//  
 
 export default MainContainer;

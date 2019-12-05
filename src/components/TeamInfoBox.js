@@ -6,7 +6,7 @@ const TeamInfoBox = (props) => {
     return (
 
         <div id="Players" className="grid-item">
-            {props.players.map(pl => <PlayerCards player={pl}/>)}
+            {props.players && props.players.map(pl => <PlayerCards player={pl}/>)}
         </div>
     )
 
