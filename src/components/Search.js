@@ -6,7 +6,7 @@ const Search = (props) => {
     <div>
       <strong>Search team or players:</strong>
       <br/>
-      <Input loading icon='user' iconPosition='left' placeholder='Search teams/players' onChange={e => props.fillSearch(e.target.value)} className='search'/>
+      <Input placeholder='Search teams/players' onChange={e => props.fillSearch(e.target.value)} className='search'/>
     </div>
   );
 }

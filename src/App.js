@@ -48,7 +48,8 @@ class App extends Component {
     API.getSingleTeam(teamID)
     .then(team => this.setState({ 
       players: team.players,
-      selectedTeam: teamID
+      selectedTeam: teamID,
+      userInput: "",
     }))
   }
 

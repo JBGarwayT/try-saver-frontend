@@ -53,6 +53,7 @@ class MainContainer extends Component {
     return (
       <div className="grid-container">
         <div className="tabheaders">
+          <Header as='h2'>Leagues</Header>
           {this.props.leagues.map(league => <LeagueHeader lg={league} click={this.props.changeLeagueId}/>)}
         </div>
          <div className="tabheaders">
